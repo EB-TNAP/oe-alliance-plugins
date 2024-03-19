@@ -1232,7 +1232,7 @@ class Blindscan(ConfigListScreen, Screen, TransponderFiltering):
 		self.start_freq = self.blindscan_start_frequency # Start Freq. key for ServiceScan
 		self.end_freq = self.blindscan_stop_frequency # Stop freq. key for ServiceScan
 		tuner = nimmanager.nim_slots[self.feid].friendly_full_description
-		tmpmes2 = _("Looking for available transponders.\n \n" + tuner + "\n \n")
+		tmpmes2 = _("Looking for available transponders.\n" + tuner + "\n \n")
 
 		if is_scan:
 			self.blindscan_session = self.session.openWithCallback(self.blindscanSessionClose, BlindscanState, tmpmes, tmpmes2, [])
